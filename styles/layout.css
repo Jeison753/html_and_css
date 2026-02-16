@@ -3,81 +3,99 @@ body {
   font-family: sans-serif;
 }
 
+/* =========================
+   HEADER
+========================= */
 .header {
-  width: 100%;
-  height: 70px;
-  background-color: #e1f6fa;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  width: 100%;                  /* Ocupa todo el ancho de la pantalla */
+  height: 70px;                 /* Altura fija del header */
+  background-color: #e1f6fa;    /* Color de fondo */
+  position: sticky;             /* Se queda fijo al hacer scroll */
+  top: 0;                       /* Se pega a la parte superior */
+  z-index: 100;                 /* Se mantiene por encima del resto del contenido */
 }
 
+/* Contenedor interno del header */
 .header-container {
-  height: 100%;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  padding: 0px 40px;
-  text-align: center;
-  margin: 0%;
+  height: 100%;                 /* Usa toda la altura del header */
+  display: grid;                /* Usa CSS Grid para el layout */
+  grid-template-columns: auto 1fr auto; /* Logo | navegación | botón */
+  align-items: center;          /* Centra verticalmente los elementos */
+  padding: 0px 40px;            /* Espaciado horizontal interno */
+  text-align: center;           /* Centra el texto */
+  margin: 0%;                   /* Elimina márgenes */
 }
 
+/* Imagen del logo */
 .header-container img {
-  display: block;     /* elimina espacio inferior */
-  max-height: 100%;   /* no se sale del header */
+  display: block;               /* Elimina espacios extra debajo de la imagen */
+  max-height: 100%;             /* Evita que la imagen se salga del header */
 }
 
+/* =========================
+   FOOTER
+========================= */
 .footer {
-  background: #000;
-  color: white;
-  padding: 60px 40px;
+  background: #000;             /* Fondo negro */
+  color: white;                 /* Texto blanco */
+  padding: 60px 40px;           /* Espaciado interno */
 }
 
+/* Parte superior del footer */
 .footer-top {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 2fr repeat(4, 1fr);
-  gap: 40px;
+  max-width: 1200px;            /* Ancho máximo del contenido */
+  margin: auto;                 /* Centra horizontalmente */
+  display: grid;                /* Layout en grid */
+  grid-template-columns: 2fr repeat(4, 1fr); /* Columna principal + 4 columnas */
+  gap: 40px;                    /* Espacio entre columnas */
 }
 
+/* Título principal del footer */
 .footer h4 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 24px;              /* Tamaño del texto */
+  margin-bottom: 10px;          /* Separación inferior */
 }
 
+/* Subtítulos del footer */
 .footer h5 {
-  color: #00aaff;
-  margin-bottom: 15px;
+  color: #00aaff;               /* Color azul */
+  margin-bottom: 15px;          /* Separación inferior */
 }
 
+/* Texto descriptivo del footer */
 .footer p {
-  color: #aaa;
-  font-size: 14px;
-  margin-bottom: 20px;
+  color: #aaa;                  /* Color gris claro */
+  font-size: 14px;              /* Tamaño pequeño */
+  margin-bottom: 20px;          /* Espaciado inferior */
 }
 
+/* Enlaces del footer */
 .footer-links a {
-  display: block;
-  color: #aaa;
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 14px;
+  display: block;               /* Cada enlace ocupa una línea */
+  color: #aaa;                  /* Color gris */
+  text-decoration: none;        /* Quita subrayado */
+  margin-bottom: 10px;          /* Espacio entre enlaces */
+  font-size: 14px;              /* Tamaño del texto */
 }
 
+/* Hover de enlaces del footer */
 .footer-links a:hover {
-  color: white;
+  color: white;                 /* Cambia a blanco al pasar el mouse */
 }
 
+/* =========================
+   BOTONES
+========================= */
 .btn-download {
-  background: #00aaff;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
-  cursor: pointer;
+  background: #00aaff;          /* Fondo azul */
+  color: white;                 /* Texto blanco */
+  border: none;                 /* Sin borde */
+  padding: 12px 24px;           /* Tamaño del botón */
+  border-radius: 25px;          /* Bordes redondeados */
+  cursor: pointer;              /* Cursor tipo botón */
 }
 
+/* Botón con animación */
 .btn-download-animated {
   background: #00aaff;
   color: white;
@@ -85,127 +103,150 @@ body {
   padding: 12px 24px;
   border-radius: 25px;
   cursor: pointer;
-  transition: 
-  background-color 0.3s ease,
-  box-shadow 0.3s ease,
-  transform 0.3s ease;
+  transition:                   /* Animaciones suaves */
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
+/* Efecto hover del botón animado */
 .btn-download-animated:hover {
-  box-shadow: 0 10px 25px rgba(0, 149, 255, 0.4);
+  box-shadow: 0 10px 25px rgba(0, 149, 255, 0.4); /* Sombra flotante */
 }
 
+/* =========================
+   FOOTER BOTTOM
+========================= */
 .footer-bottom {
   max-width: 1200px;
-  margin: 40px auto 0;
-  padding-top: 30px;
-  border-top: 1px solid #222;
+  margin: 40px auto 0;          /* Espacio superior y centrado */
+  padding-top: 30px;            /* Espacio interno superior */
+  border-top: 1px solid #222;   /* Línea divisoria */
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex;                /* Flexbox */
+  justify-content: space-between; /* Separación horizontal */
+  align-items: center;          /* Centrado vertical */
 }
 
 .footer-bottom span {
-  color: #aaa;
+  color: #aaa;                  /* Texto gris */
 }
 
+/* Selector de idioma */
 .footer-bottom select {
-  background: #000;
-  color: white;
-  border: 1px solid #555;
-  padding: 10px 20px;
-  border-radius: 20px;
+  background: #000;             /* Fondo negro */
+  color: white;                 /* Texto blanco */
+  border: 1px solid #555;       /* Borde gris */
+  padding: 10px 20px;           /* Tamaño */
+  border-radius: 20px;          /* Bordes redondeados */
 }
 
+/* =========================
+   SECTIONS
+========================= */
 .section {
-  width: 100%;
-  padding: 80px 40px;
-  position: relative;
-  overflow: hidden;
+  width: 100%;                  /* Ancho completo */
+  padding: 80px 40px;           /* Espaciado interno */
+  position: relative;           /* Referencia para elementos absolutos */
+  overflow: hidden;             /* Oculta desbordes */
 }
 
+/* Contenido interno de cada sección */
 .section-content {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
+  max-width: 1200px;            /* Ancho máximo */
+  margin: auto;                 /* Centrado */
+  display: grid;                /* Grid de dos columnas */
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-  z-index: 1;
+  align-items: center;          /* Centrado vertical */
+  gap: 40px;                    /* Espacio entre columnas */
+  z-index: 1;                   /* Encima del fondo */
 }
 
+/* Sección clara */
 .section.light {
-  background: linear-gradient(120deg, #eaf7fb, #cdeff7);
+  background: linear-gradient(120deg, #eaf7fb, #cdeff7); /* Gradiente */
   position: relative;
   overflow: hidden;
 }
 
+/* Imagen de fondo */
 .image {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  position: absolute;           /* Se superpone a la sección */
+  inset: 0;                     /* Ocupa todo el contenedor */
+  z-index: 0;                   /* Detrás del texto */
 }
 
+/* Imagen interna */
 .image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;                  /* Ancho completo */
+  height: 100%;                 /* Alto completo */
+  object-fit: cover;            /* Recorte proporcional */
 }
 
+/* Contenedor de texto */
 .text {
-  position: relative;
-  z-index: 1;
+  position: relative;           /* Para respetar el z-index */
+  z-index: 1;                   /* Por encima de la imagen */
 }
 
+/* Sección azul */
 .section.blue {
-  background-color: #0095ff;
-  color: white;
+  background-color: #0095ff;    /* Fondo azul */
+  color: white;                 /* Texto blanco */
   position: relative;
   overflow: hidden;
 }
 
 .section.blue p {
-  color: #e0f3ff;
+  color: #e0f3ff;               /* Texto más claro */
 }
 
+/* =========================
+   NAVEGACIÓN
+========================= */
 .logo img {
-  height: 50px;
+  height: 50px;                 /* Tamaño del logo */
 }
 
 .nav a {
-  text-decoration: none;
-  color: #333;
-  padding: 5%;
+  text-decoration: none;        /* Sin subrayado */
+  color: #333;                  /* Color del texto */
+  padding: 5%;                  /* Área clickeable */
 }
 
 .nav a:hover {
-  color: #0095ff;
+  color: #0095ff;               /* Color al pasar el mouse */
 }
 
-
+/* =========================
+   DESCARGA
+========================= */
 .download {
   display: flex;
-  justify-content: end;
+  justify-content: end;          /* Alineado a la derecha */
 }
 
 .download img {
-  height: 40px;
+  height: 40px;                 /* Tamaño del botón imagen */
 }
 
+/* =========================
+   TIPOGRAFÍA
+========================= */
 h1 {
-  font-size: 48px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  color: #0095ff;
+  font-size: 48px;              /* Tamaño grande */
+  line-height: 1.2;             /* Altura de línea */
+  margin-bottom: 20px;          /* Separación inferior */
+  color: #0095ff;               /* Color azul */
 }
 
 h2 {
   font-size: 48px;
   line-height: 1.2;
   margin-bottom: 20px;
-  color: white
+  color: white;
 }
+
 
 p {
   font-size: 16px;
