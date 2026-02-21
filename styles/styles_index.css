@@ -67,11 +67,19 @@ b {
 .contenedor {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 40px;
+    gap: 10px 20px;
     text-align: center;
 }
 
 .contenedor p {
-    width: calc(33.33% - 40px); /* 3 por fila */
+    flex: 1 1 calc(33.333% - 20px);
 }
+
+/* Responsive Para celulares */
+@media (max-width: 600px) {
+    .contenedor p {
+        flex: 1 1 100%;
+    }
+}
+
 
