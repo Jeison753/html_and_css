@@ -7,9 +7,9 @@ body {
    HEADER
 ========================= */
 .header {
-  width: 100%;                  /* Ocupa todo el ancho de la pantalla */
-  height: 70px;                 /* Altura fija del header */
-  background-color: #e1f6fa;    /* Color de fondo */
+  width: 100%;                  
+  height: 4.375rem;             /* Altura fija del header */
+  background-color: #e1f6fa;  /* Color de fondo */
   position: sticky;             /* Se queda fijo al hacer scroll */
   top: 0;                       /* Se pega a la parte superior */
   z-index: 100;                 /* Se mantiene por encima del resto del contenido */
@@ -21,7 +21,7 @@ body {
   display: grid;                /* Usa CSS Grid para el layout */
   grid-template-columns: auto 1fr auto; /* Logo | navegación | botón */
   align-items: center;          /* Centra verticalmente los elementos */
-  padding: 0px 40px;            /* Espaciado horizontal interno */
+  padding: 0% 3.33%;            /* Espaciado horizontal interno */
   text-align: center;           /* Centra el texto */
   margin: 0%;                   /* Elimina márgenes */
 }
@@ -38,22 +38,22 @@ body {
 .footer {
   background: #000;             /* Fondo negro */
   color: white;                 /* Texto blanco */
-  padding: 60px 40px;           /* Espaciado interno */
+  padding: 5% 3.33%;          /* Espaciado interno */
 }
 
 /* Parte superior del footer */
 .footer-top {
-  max-width: 1200px;            /* Ancho máximo del contenido */
+  max-width: 75rem;            /* Ancho máximo del contenido */
   margin: auto;                 /* Centra horizontalmente */
   display: grid;                /* Layout en grid */
   grid-template-columns: 2fr repeat(4, 1fr); /* Columna principal + 4 columnas */
-  gap: 40px;                    /* Espacio entre columnas */
+  gap: 2.5rem;                    /* Espacio entre columnas */
 }
 
 /* Título principal del footer */
 .footer h4 {
-  font-size: 24px;              /* Tamaño del texto */
-  margin-bottom: 10px;          /* Separación inferior */
+  font-size: 1.5rem;              /* Tamaño del texto */
+  margin-bottom: 0.625rem          /* Separación inferior */
 }
 
 /* Subtítulos del footer */
@@ -65,8 +65,8 @@ body {
 /* Texto descriptivo del footer */
 .footer p {
   color: #aaa;                  /* Color gris claro */
-  font-size: 14px;              /* Tamaño pequeño */
-  margin-bottom: 20px;          /* Espaciado inferior */
+  font-size: 0.875rem;              /* Tamaño pequeño */
+  margin-bottom: 1.25rem;          /* Espaciado inferior */
 }
 
 /* Enlaces del footer */
@@ -90,8 +90,8 @@ body {
   background: #00aaff;          /* Fondo azul */
   color: white;                 /* Texto blanco */
   border: none;                 /* Sin borde */
-  padding: 12px 24px;           /* Tamaño del botón */
-  border-radius: 25px;          /* Bordes redondeados */
+  padding: 0.75rem 1.5rem;           /* Tamaño del botón */
+  border-radius: 1.56rem;          /* Bordes redondeados */
   cursor: pointer;              /* Cursor tipo botón */
 }
 
@@ -100,7 +100,7 @@ body {
   background: #00aaff;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   border-radius: 25px;
   cursor: pointer;
   transition:                   /* Animaciones suaves */
@@ -118,9 +118,9 @@ body {
    FOOTER BOTTOM
 ========================= */
 .footer-bottom {
-  max-width: 1200px;
-  margin: 40px auto 0;          /* Espacio superior y centrado */
-  padding-top: 30px;            /* Espacio interno superior */
+  max-width: 75rem;
+  margin: 2.5rem auto 0;          /* Espacio superior y centrado */
+  padding-top: 1.875rem;            /* Espacio interno superior */
   border-top: 1px solid #222;   /* Línea divisoria */
 
   display: flex;                /* Flexbox */
@@ -137,7 +137,7 @@ body {
   background: #000;             /* Fondo negro */
   color: white;                 /* Texto blanco */
   border: 1px solid #555;       /* Borde gris */
-  padding: 10px 20px;           /* Tamaño */
+  padding: 0.625rem 1.25rem;           /* Tamaño */
   border-radius: 20px;          /* Bordes redondeados */
 }
 
@@ -146,19 +146,19 @@ body {
 ========================= */
 .section {
   width: 100%;                  /* Ancho completo */
-  padding: 80px 40px;           /* Espaciado interno */
+  padding: 6.66% 3.33%;           /* Espaciado interno */
   position: relative;           /* Referencia para elementos absolutos */
   overflow: hidden;             /* Oculta desbordes */
 }
 
 /* Contenido interno de cada sección */
 .section-content {
-  max-width: 1200px;            /* Ancho máximo */
+  max-width: 75rem;            /* Ancho máximo */
   margin: auto;                 /* Centrado */
   display: grid;                /* Grid de dos columnas */
   grid-template-columns: 1fr 1fr;
   align-items: center;          /* Centrado vertical */
-  gap: 40px;                    /* Espacio entre columnas */
+  gap: 3.33%;                    /* Espacio entre columnas */
   z-index: 1;                   /* Encima del fondo */
 }
 
@@ -205,7 +205,7 @@ body {
    NAVEGACIÓN
 ========================= */
 .logo img {
-  height: 50px;                 /* Tamaño del logo */
+  height: 3.125rem;                 /* Tamaño del logo */
 }
 
 .nav a {
@@ -227,30 +227,181 @@ body {
 }
 
 .download img {
-  height: 40px;                 /* Tamaño del botón imagen */
+  height: 2.5rem;                 /* Tamaño del botón imagen */
 }
 
 /* =========================
    TIPOGRAFÍA
 ========================= */
 h1 {
-  font-size: 48px;              /* Tamaño grande */
+  font-size: 3rem;              /* Tamaño grande */
   line-height: 1.2;             /* Altura de línea */
-  margin-bottom: 20px;          /* Separación inferior */
+  margin-bottom: 1.25rem;         /* Separación inferior */
   color: #0095ff;               /* Color azul */
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   color: white;
 }
 
 
 p {
-  font-size: 16px;
-  max-width: 420px;
+  font-size: 1rem;
+  max-width: 26.25rem;
+}
+
+/* =====================================
+   RESPONSIVE TABLET
+===================================== */
+@media (max-width: 992px) {
+
+  .header-container {
+    padding: 0rem 1.25rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Sección en una columna */
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 1.875rem;
+    text-align: left;
+    justify-items: start; /* pega el contenido a la izquierda */
+  }
+
+  .text {
+    margin: 0;
+    max-width: 26.25rem;
+    justify-self: start; /* evita que se centre */
+  }
+
+
+  h1, h2 {
+    font-size: 2.25rem;
+  }
+
+}
+
+/* =====================================
+   RESPONSIVE MÓVIL
+===================================== */
+@media screen and (max-width: 600px) {
+
+  .text {
+    width: 50%;
+  }
+
+  .image img {
+    object-position: 65% center;
+  }
+
+  /* HEADER */
+  .header {
+    height: auto;
+    padding: 0.625rem 0rem;
+  }
+
+  .header-container {
+    grid-template-columns: 1fr; /* Todo en columna */
+    gap: 0.625rem;
+    padding: 0.625rem 1.25rem;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+  }
+
+  .download {
+    justify-content: center;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 3.75rem 1.25rem;
+  }
+
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  h1, h2 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    max-width: 100%;
+    font-size: 0.875rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 1.875rem;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.9375rem;
+    text-align: center;
+  }
+
+}
+
+/* Botón hamburguesa oculto en PC */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+/* MODO MÓVIL */
+@media (max-width: 768px) {
+
+  .header-container {
+    grid-template-columns: auto auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    justify-self: end;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    grid-column: 1 / -1;
+    background: #e1f6fa;
+    padding: 0.625rem 0rem;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .btn-download {
+    display: none;
+    grid-column: 1 / -1;
+    margin: 0.625rem auto;
+  }
+
+  .btn-download.active {
+    display: block;
+  }
 }
 
 
