@@ -1,72 +1,408 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: #9c9c9c;  
-    margin: 0px;
-    padding: 20px;
+  margin: 0%;
+  font-family: sans-serif;
 }
 
+/* =========================
+   HEADER
+========================= */
+.header {
+  width: 100%;                  
+  height: 4.375rem;             /* Altura fija del header */
+  background-color: #e1f6fa;  /* Color de fondo */
+  position: sticky;             /* Se queda fijo al hacer scroll */
+  top: 0;                       /* Se pega a la parte superior */
+  z-index: 100;                 /* Se mantiene por encima del resto del contenido */
+}
+
+/* Contenedor interno del header */
+.header-container {
+  height: 100%;                 /* Usa toda la altura del header */
+  display: grid;                /* Usa CSS Grid para el layout */
+  grid-template-columns: auto 1fr auto; /* Logo | navegación | botón */
+  align-items: center;          /* Centra verticalmente los elementos */
+  padding: 0% 3.33%;            /* Espaciado horizontal interno */
+  text-align: center;           /* Centra el texto */
+  margin: 0%;                   /* Elimina márgenes */
+}
+
+/* Imagen del logo */
+.header-container img {
+  display: block;               /* Elimina espacios extra debajo de la imagen */
+  max-height: 100%;             /* Evita que la imagen se salga del header */
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #000;             /* Fondo negro */
+  color: white;                 /* Texto blanco */
+  padding: 5% 3.33%;          /* Espaciado interno */
+}
+
+/* Parte superior del footer */
+.footer-top {
+  max-width: 75rem;            /* Ancho máximo del contenido */
+  margin: auto;                 /* Centra horizontalmente */
+  display: grid;                /* Layout en grid */
+  grid-template-columns: 2fr repeat(4, 1fr); /* Columna principal + 4 columnas */
+  gap: 2.5rem;                    /* Espacio entre columnas */
+}
+
+/* Título principal del footer */
+.footer h4 {
+  font-size: 1.5rem;              /* Tamaño del texto */
+  margin-bottom: 0.625rem          /* Separación inferior */
+}
+
+/* Subtítulos del footer */
+.footer h5 {
+  color: #00aaff;               /* Color azul */
+  margin-bottom: 15px;          /* Separación inferior */
+}
+
+/* Texto descriptivo del footer */
+.footer p {
+  color: #aaa;                  /* Color gris claro */
+  font-size: 0.875rem;              /* Tamaño pequeño */
+  margin-bottom: 1.25rem;          /* Espaciado inferior */
+}
+
+/* Enlaces del footer */
+.footer-links a {
+  display: block;               /* Cada enlace ocupa una línea */
+  color: #aaa;                  /* Color gris */
+  text-decoration: none;        /* Quita subrayado */
+  margin-bottom: 10px;          /* Espacio entre enlaces */
+  font-size: 14px;              /* Tamaño del texto */
+}
+
+/* Hover de enlaces del footer */
+.footer-links a:hover {
+  color: white;                 /* Cambia a blanco al pasar el mouse */
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn-download {
+  background: #00aaff;          /* Fondo azul */
+  color: white;                 /* Texto blanco */
+  border: none;                 /* Sin borde */
+  padding: 0.75rem 1.5rem;           /* Tamaño del botón */
+  border-radius: 1.56rem;          /* Bordes redondeados */
+  cursor: pointer;              /* Cursor tipo botón */
+}
+
+/* Botón con animación */
+.btn-download-animated {
+  background: #00aaff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition:                   /* Animaciones suaves */
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+/* Efecto hover del botón animado */
+.btn-download-animated:hover {
+  box-shadow: 0 10px 25px rgba(0, 149, 255, 0.4); /* Sombra flotante */
+}
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+.footer-bottom {
+  max-width: 75rem;
+  margin: 2.5rem auto 0;          /* Espacio superior y centrado */
+  padding-top: 1.875rem;            /* Espacio interno superior */
+  border-top: 1px solid #222;   /* Línea divisoria */
+
+  display: flex;                /* Flexbox */
+  justify-content: space-between; /* Separación horizontal */
+  align-items: center;          /* Centrado vertical */
+}
+
+.footer-bottom span {
+  color: #aaa;                  /* Texto gris */
+}
+
+/* Selector de idioma */
+.footer-bottom select {
+  background: #000;             /* Fondo negro */
+  color: white;                 /* Texto blanco */
+  border: 1px solid #555;       /* Borde gris */
+  padding: 0.625rem 1.25rem;           /* Tamaño */
+  border-radius: 20px;          /* Bordes redondeados */
+}
+
+/* =========================
+   SECTIONS
+========================= */
+.section {
+  width: 100%;                  /* Ancho completo */
+  padding: 6.66% 3.33%;           /* Espaciado interno */
+  position: relative;           /* Referencia para elementos absolutos */
+  overflow: hidden;             /* Oculta desbordes */
+}
+
+/* Contenido interno de cada sección */
+.section-content {
+  max-width: 75rem;            /* Ancho máximo */
+  margin: auto;                 /* Centrado */
+  display: grid;                /* Grid de dos columnas */
+  grid-template-columns: 1fr 1fr;
+  align-items: center;          /* Centrado vertical */
+  gap: 3.33%;                    /* Espacio entre columnas */
+  z-index: 1;                   /* Encima del fondo */
+}
+
+/* Sección clara */
+.section.light {
+  background: linear-gradient(120deg, #eaf7fb, #cdeff7); /* Gradiente */
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen de fondo */
+.image {
+  position: absolute;           /* Se superpone a la sección */
+  inset: 0;                     /* Ocupa todo el contenedor */
+  z-index: 0;                   /* Detrás del texto */
+}
+
+/* Imagen interna */
+.image img {
+  width: 100%;                  /* Ancho completo */
+  height: 100%;                 /* Alto completo */
+  object-fit: cover;            /* Recorte proporcional */
+}
+
+/* Contenedor de texto */
+.text {
+  position: relative;           /* Para respetar el z-index */
+  z-index: 1;                   /* Por encima de la imagen */
+}
+
+/* Sección azul */
+.section.blue {
+  background-color: #0095ff;    /* Fondo azul */
+  color: white;                 /* Texto blanco */
+  position: relative;
+  overflow: hidden;
+}
+
+.section.blue p {
+  color: #e0f3ff;               /* Texto más claro */
+}
+
+/* =========================
+   NAVEGACIÓN
+========================= */
+.logo img {
+  height: 3.125rem;                 /* Tamaño del logo */
+}
+
+.nav a {
+  text-decoration: none;        /* Sin subrayado */
+  color: #333;                  /* Color del texto */
+  padding: 5%;                  /* Área clickeable */
+}
+
+.nav a:hover {
+  color: #0095ff;               /* Color al pasar el mouse */
+}
+
+/* =========================
+   DESCARGA
+========================= */
+.download {
+  display: flex;
+  justify-content: end;          /* Alineado a la derecha */
+}
+
+.download img {
+  height: 2.5rem;                 /* Tamaño del botón imagen */
+}
+
+/* =========================
+   TIPOGRAFÍA
+========================= */
 h1 {
-    text-align: center;
-    color: #333333;
-    width: 550px;
+  font-size: 3rem;              /* Tamaño grande */
+  line-height: 1.2;             /* Altura de línea */
+  margin-bottom: 1.25rem;         /* Separación inferior */
+  color: #0095ff;               /* Color azul */
 }
 
 h2 {
-    color: #444444;
-    margin-top: 20px;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  color: white;
 }
+
 
 p {
-    color: #222222;
+  font-size: 1rem;
+  max-width: 26.25rem;
 }
 
-ul {
-    margin-left: 20px;
+/* =====================================
+   RESPONSIVE TABLET
+===================================== */
+@media (max-width: 992px) {
+
+  .header-container {
+    padding: 0rem 1.25rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Sección en una columna */
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 1.875rem;
+    text-align: left;
+    justify-items: start; /* pega el contenido a la izquierda */
+  }
+
+  .text {
+    margin: 0;
+    max-width: 26.25rem;
+    justify-self: start; /* evita que se centre */
+  }
+
+
+  h1, h2 {
+    font-size: 2.25rem;
+  }
+
 }
 
-b {
-    color: #222222;
-}
+/* =====================================
+   RESPONSIVE MÓVIL
+===================================== */
+@media screen and (max-width: 600px) {
 
-.hv-container {
-    max-width: 800px;           
-    margin: 0 auto;             
-    background-color: #ffffff;  
-    padding: 20px;              
-    border-radius: 8px;         
-    border: 1px solid #dddddd;
-}
+  .text {
+    width: 50%;
+  }
 
-.hv-header {
+  .image img {
+    object-position: 65% center;
+  }
+
+  /* HEADER */
+  .header {
+    height: auto;
+    padding: 0.625rem 0rem;
+  }
+
+  .header-container {
+    grid-template-columns: 1fr; /* Todo en columna */
+    gap: 0.625rem;
+    padding: 0.625rem 1.25rem;
+  }
+
+  .nav {
     display: flex;
-    padding: 24px 32px;
-    background: linear-gradient(135deg, #0ab2e6, #3b82f6);
-    align-items: center;
-    margin-bottom: 20px;
-}
+    flex-direction: column;
+    gap: 0.625rem;
+  }
 
-.foto-perfil img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 4px solid rgba(0, 0, 0, 0.85);
-    object-fit: cover;
-}
+  .download {
+    justify-content: center;
+  }
 
-.linea {
-    border: none;
-    border-top: 2px solid #000;
-    margin: 20px 0;
-}
+  /* SECTIONS */
+  .section {
+    padding: 3.75rem 1.25rem;
+  }
 
-.contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px 40px;
+  .section-content {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  h1, h2 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    max-width: 100%;
+    font-size: 0.875rem;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr; /* Una sola columna */
+    gap: 1.875rem;
     text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.9375rem;
+    text-align: center;
+  }
+
 }
 
-.contenedor p {
-    width: calc(33.33% - 40px); /* 3 por fila */
+/* Botón hamburguesa oculto en PC */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
 }
+
+/* MODO MÓVIL */
+@media (max-width: 768px) {
+
+  .header-container {
+    grid-template-columns: auto auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    justify-self: end;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    grid-column: 1 / -1;
+    background: #e1f6fa;
+    padding: 0.625rem 0rem;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .btn-download {
+    display: none;
+    grid-column: 1 / -1;
+    margin: 0.625rem auto;
+  }
+
+  .btn-download.active {
+    display: block;
+  }
+}
+
+
 
