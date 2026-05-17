@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 1.1</title>
+</head>
+<body>
+
+  <h1>Actividad 1.1 - Saludo personalizado</h1>
+
+  <script>
+
+    // Nombre: Jeison Felipe Duarte Porras
+    // Ficha: 3312694
+    // Actividad: 1.1 - Saludo personalizado
+
+    function saludoPersonalizado(nombre, hora) {
+
+      if (hora >= 5 && hora <= 11) {
+        return "Buenos días, " + nombre;
+      }
+
+      else if (hora >= 12 && hora <= 18) {
+        return "Buenas tardes, " + nombre;
+      }
+
+      else {
+        return "Buenas noches, " + nombre;
+      }
+
+    }
+
+    const nombre = prompt("Ingrese su nombre:");
+    const hora = Number(prompt("Ingrese la hora (0 - 23):"));
+
+    const saludo = saludoPersonalizado(nombre, hora);
+
+    alert(saludo);
+
+    console.log(saludo);
+
+  </script>
+
+</body>
+</html>

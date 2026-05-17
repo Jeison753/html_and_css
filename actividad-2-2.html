@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 2.2</title>
+</head>
+<body>
+
+  <h1>Actividad 2.2 - Procesamiento de arreglos</h1>
+
+  <script>
+
+    // Nombre: Jeison Felipe Duarte Porras
+    // Ficha: 3312694
+    // Actividad: 2.2 - Procesamiento de arreglos
+
+    const aprendices = [
+      { nombre: 'Carlos', edad: 22, nota: 4.5 },
+      { nombre: 'Laura', edad: 19, nota: 3.8 },
+      { nombre: 'Andrés', edad: 25, nota: 4.9 },
+      { nombre: 'María', edad: 21, nota: 3.2 },
+      { nombre: 'Diego', edad: 23, nota: 4.1 }
+    ];
+
+    // 1. Obtener nombres
+
+    const nombres = aprendices.map(aprendiz => aprendiz.nombre);
+
+    console.log("Nombres de aprendices:");
+    console.log(nombres);
+
+    // 2. Filtrar notas >= 4.0
+
+    const notasAltas = aprendices.filter(
+      aprendiz => aprendiz.nota >= 4.0
+    );
+
+    console.log("Aprendices con nota mayor o igual a 4.0:");
+    console.log(notasAltas);
+
+    // 3. Promedio de edades
+
+    const sumaEdades = aprendices.reduce(
+      (acumulador, aprendiz) => acumulador + aprendiz.edad,
+      0
+    );
+
+    const promedioEdad = sumaEdades / aprendices.length;
+
+    console.log("Promedio de edades:");
+    console.log(promedioEdad);
+
+    // 4. Nota más alta
+
+    const mejorAprendiz = aprendices.reduce(
+      (mejor, actual) => {
+        return actual.nota > mejor.nota ? actual : mejor;
+      }
+    );
+
+    console.log("Aprendiz con mejor nota:");
+    console.log(mejorAprendiz);
+
+  </script>
+
+</body>
+</html>

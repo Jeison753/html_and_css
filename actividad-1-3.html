@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 1.3</title>
+</head>
+<body>
+
+  <h1>Actividad 1.3 - Conversor de temperaturas</h1>
+
+  <script>
+
+    // Nombre: Jeison Felipe Duarte Porras
+    // Ficha: 3312694
+    // Actividad: 1.3 - Conversor de temperaturas
+
+    function celsiusAFahrenheit(celsius) {
+      return ((celsius * 9/5) + 32).toFixed(2);
+    }
+
+    function fahrenheitACelsius(fahrenheit) {
+      return ((fahrenheit - 32) * 5/9).toFixed(2);
+    }
+
+    console.log("0°C =", celsiusAFahrenheit(0), "°F");
+    console.log("25°C =", celsiusAFahrenheit(25), "°F");
+    console.log("40°C =", celsiusAFahrenheit(40), "°F");
+
+    console.log("32°F =", fahrenheitACelsius(32), "°C");
+    console.log("77°F =", fahrenheitACelsius(77), "°C");
+    console.log("104°F =", fahrenheitACelsius(104), "°C");
+
+  </script>
+
+</body>
+</html>

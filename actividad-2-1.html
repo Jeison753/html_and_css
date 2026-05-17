@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 2.1</title>
+</head>
+<body>
+
+  <h1>Actividad 2.1 - Validador de contraseñas</h1>
+
+  <script>
+
+    // Nombre: Jeison Felipe Duarte Porras
+    // Ficha: 3312694
+    // Actividad: 2.1 - Validador de contraseñas
+
+    function validarPassword(password) {
+
+      const longitudValida = password.length >= 8;
+
+      const tieneMayuscula = /[A-Z]/.test(password);
+
+      const tieneNumero = /[0-9]/.test(password);
+
+      const tieneEspecial = /[!@#$%&*]/.test(password);
+
+      const esValida =
+        longitudValida &&
+        tieneMayuscula &&
+        tieneNumero &&
+        tieneEspecial;
+
+      return {
+        longitudValida,
+        tieneMayuscula,
+        tieneNumero,
+        tieneEspecial,
+        esValida
+      };
+
+    }
+
+    const password = prompt("Ingrese una contraseña:");
+
+    const resultado = validarPassword(password);
+
+    console.log(resultado);
+
+  </script>
+
+</body>
+</html>

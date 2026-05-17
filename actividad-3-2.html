@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 3.2</title>
+</head>
+<body>
+
+  <h1>Actividad 3.2 - Mini carrito de compras</h1>
+
+  <script>
+
+    // Nombre: Jeison Felipe Duarte Porras
+    // Ficha: 3312694
+    // Actividad: 3.2 - Mini carrito de compras
+
+    let carrito = [];
+
+    // Agregar producto
+
+    function agregarProducto(carrito, producto) {
+
+      return [...carrito, producto];
+
+    }
+
+    // Eliminar producto
+
+    function eliminarProducto(carrito, id) {
+
+      return carrito.filter(producto => producto.id !== id);
+
+    }
+
+    // Calcular total
+
+    function calcularTotal(carrito) {
+
+      return carrito.reduce(
+        (total, producto) =>
+          total + (producto.precio * producto.cantidad),
+        0
+      );
+
+    }
+
+    // Aplicar descuento
+
+    function aplicarDescuento(carrito, porcentaje) {
+
+      const total = calcularTotal(carrito);
+
+      const descuento = total * (porcentaje / 100);
+
+      return total - descuento;
+
+    }
+
+    // Agregar productos
+
+    carrito = agregarProducto(carrito, {
+      id: 1,
+      nombre: "Mouse",
+      precio: 50000,
+      cantidad: 2
+    });
+
+    carrito = agregarProducto(carrito, {
+      id: 2,
+      nombre: "Teclado",
+      precio: 80000,
+      cantidad: 1
+    });
+
+    carrito = agregarProducto(carrito, {
+      id: 3,
+      nombre: "Monitor",
+      precio: 600000,
+      cantidad: 1
+    });
+
+    console.log("Carrito inicial:");
+    console.log(carrito);
+
+    // Eliminar producto
+
+    carrito = eliminarProducto(carrito, 2);
+
+    console.log("Carrito después de eliminar:");
+    console.log(carrito);
+
+    // Total
+
+    const total = calcularTotal(carrito);
+
+    console.log("Total:");
+    console.log(total);
+
+    // Total con descuento
+
+    const totalConDescuento = aplicarDescuento(carrito, 10);
+
+    console.log("Total con descuento:");
+    console.log(totalConDescuento);
+
+  </script>
+
+</body>
+</html>

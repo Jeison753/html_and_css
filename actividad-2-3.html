@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Actividad 2.3</title>
+</head>
+<body>
+
+  <h1>Actividad 2.3 - Rest Parameters</h1>
+
+  <script>
+
+    // Nombre: Jeison Felipe Duarte Porras
+    // Ficha: 3312694
+    // Actividad: 2.3 - Rest Parameters
+
+    function estadisticas(...numeros) {
+
+      if (numeros.length === 0) {
+        return null;
+      }
+
+      const suma = numeros.reduce(
+        (acumulador, numero) => acumulador + numero,
+        0
+      );
+
+      const minimo = Math.min(...numeros);
+
+      const maximo = Math.max(...numeros);
+
+      const promedio = suma / numeros.length;
+
+      return {
+        minimo,
+        maximo,
+        promedio,
+        suma
+      };
+
+    }
+
+    console.log(estadisticas(1, 2, 3, 4, 5));
+
+    console.log(estadisticas(10, 20, 30));
+
+    console.log(estadisticas());
+
+  </script>
+
+</body>
+</html>
