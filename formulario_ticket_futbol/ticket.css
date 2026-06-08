@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("img/FIFA-World-Cup-2026.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 95%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h1 {
+    color: #006847;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+input,
+select {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #006847;
+    box-shadow: 0 0 5px rgba(0, 104, 71, 0.4);
+}
+
+button {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 999px;
+
+    background-color: #006847;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #004d35;
+    transform: translateY(-2px);
+}
+
+.acciones {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.btn-imprimir {
+    background-color: #1976d2;
+}
+
+.btn-imprimir:hover {
+    background-color: #1565c0;
+}
+
+.btn-eliminar {
+    background-color: #d62828;
+}
+
+.btn-eliminar:hover {
+    background-color: #b71c1c;
+}
+
+#resultado {
+    width: 90%;
+    margin-top: 25px;
+    padding: 15px;
+
+    background-color: #f8f8f8;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    border-left: 5px solid #006847;
+
+    padding: 15px;
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li button {
+    width: auto;
+    padding: 8px 15px;
+    margin-left: 10px;
+
+    background-color: #d62828;
+}
+
+li button:hover {
+    background-color: #b71c1c;
+}
+
+p {
+    color: #333;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+
+.ticket {
+
+    max-width: 700px;
+    margin: auto;
+
+    background: white;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+}
+
+.ticket-header {
+
+    background: #006847;
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+.ticket-header h1 {
+    margin-bottom: 10px;
+}
+
+.ticket-body {
+    padding: 30px;
+    text-align: center;
+}
+
+.ticket-body p {
+    margin: 15px 0;
+}
+
+.ticket-body strong {
+    color: #006847;
+}
+
+.ticket-footer {
+
+    background: #f7f7f7;
+
+    text-align: center;
+
+    padding: 20px;
+
+    border-top: 1px solid #ddd;
+}
+
+.codigo {
+
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.encabezado img {
+    height: 80px;
+    width: auto;
+}
+
+.imagenes {
+    display: none;
+}
+
+@media print {
+
+    body {
+        min-height: auto;
+        height: auto;
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 450px 1fr;
+        gap: 40px;
+        align-items: start;
+        width: 95%;
+        max-width: 1400px;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #resultado {
+        width: 100%;
+        margin: 0;
+    }
+
+    #resultado ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    li {
+        width: 90%;
+        max-width: 400px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .imagenes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 10rem;
+    }
+
+
+}

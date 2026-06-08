@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ticket.css">
+  <title>Ticket del Mundial</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+      <h1>Compra tu boleta para el Mundial</h1>
+
+      <div class="imagenes">
+
+      <img src="img/mundial.jpg" alt="Logo mundial">
+
+      <img src="img/fifa.jpg" alt="Logo fifa mundial">
+
+      <img src="img/united mundial.jpg" alt="Logo united mundial">
+
+      </div>
+
+      <div class="formulario">
+
+        <input type="number" id="id" placeholder="ID de la boleta">
+
+        <input type="text" id="nombre" placeholder="Nombre completo">
+
+        <input type="number" id="identificacion" placeholder="Número de identificación">
+
+        <input type="email" id="correo" placeholder="Correo electrónico">
+
+        <input type="tel" id="telefono" placeholder="Teléfono">
+
+        <select id="partido">
+          <option value="">Seleccione un partido</option>
+
+          <option value="Colombia vs Brasil">Colombia vs Brasil</option>
+          <option value="Argentina vs Francia">Argentina vs Francia</option>
+          <option value="España vs Alemania">España vs Alemania</option>
+          <option value="Inglaterra vs Portugal">Inglaterra vs Portugal</option>
+          <option value="Italia vs Países Bajos">Italia vs Países Bajos</option>
+          <option value="México vs Estados Unidos">México vs Estados Unidos</option>
+          <option value="Uruguay vs Bélgica">Uruguay vs Bélgica</option>
+          <option value="Croacia vs Marruecos">Croacia vs Marruecos</option>
+          <option value="Japón vs Corea del Sur">Japón vs Corea del Sur</option>
+          <option value="Brasil vs Argentina">Brasil vs Argentina</option>
+          <option value="Colombia vs España">Colombia vs España</option>
+          <option value="Francia vs Inglaterra">Francia vs Inglaterra</option>
+          <option value="Alemania vs Portugal">Alemania vs Portugal</option>
+          <option value="Argentina vs Uruguay">Argentina vs Uruguay</option>
+          <option value="Final del Mundial">Final del Mundial</option>
+        </select>
+
+
+        <select id="tipoEntrada">
+          <option value="">Seleccione tipo de entrada</option>
+          <option value="150000">General</option>
+          <option value="300000">Preferencial</option>
+          <option value="500000">VIP</option>
+        </select>
+
+        <input type="number" id="cantidad" placeholder="Cantidad de entradas">
+
+        <button onclick="agregarAlCarrito()">
+          Comprar boleta
+        </button>
+
+      </div>
+
+      <div id="resultado"></div>
+
+    </div>
+
+  <script src="ticket.js"></script>
+
+</body>
+
+</html>
