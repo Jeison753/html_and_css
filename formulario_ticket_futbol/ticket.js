@@ -40,6 +40,10 @@ function calcularTotal(carrito) {
 
 function agregarAlCarrito() {
 
+  if (!validarFormulario()) {
+  return;
+}
+
   const id =
     Number(document.getElementById("id").value);
 
@@ -100,6 +104,57 @@ function agregarAlCarrito() {
 
   mostrarCarrito();
 
+}
+
+function validarFormulario() {
+
+  const id =
+    document.getElementById("id").value;
+
+  const nombre =
+    document.getElementById("nombre").value;
+
+  const identificacion =
+    document.getElementById("identificacion").value;
+
+  const correo =
+    document.getElementById("correo").value;
+
+  const telefono =
+    document.getElementById("telefono").value;
+
+  const partido =
+    document.getElementById("partido").value;
+
+  const tipoEntrada =
+    document.getElementById("tipoEntrada").value;
+
+  const cantidad =
+    document.getElementById("cantidad").value;
+
+  if (
+    id === "" ||
+    nombre === "" ||
+    identificacion === "" ||
+    correo === "" ||
+    telefono === "" ||
+    partido === "" ||
+    tipoEntrada === "" ||
+    cantidad === ""
+  ) {
+
+    document.getElementById("mensaje").innerHTML = `
+      <p class="error">
+        Debe rellenar todos los campos.
+      </p>
+    `;
+
+    return false;
+  }
+
+  document.getElementById("mensaje").innerHTML = "";
+
+  return true;
 }
 
 function mostrarCarrito() {

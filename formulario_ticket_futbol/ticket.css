@@ -226,6 +226,19 @@ p {
     display: none;
 }
 
+#mensaje {
+    width: 100%;
+}
+
+.error {
+    color: red;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
 @media print {
 
     body {
@@ -234,6 +247,8 @@ p {
     }
 
 }
+
+/*Desktop */
 
 @media (min-width: 992px) {
 
